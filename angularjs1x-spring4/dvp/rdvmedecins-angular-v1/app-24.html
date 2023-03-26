@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="rdvmedecins">
+<head>
+  <title>RdvMedecins</title>
+  <!-- META -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Angular client for RdvMedecins">
+  <meta name="author" content="Serge Tahé">
+  <!-- le CSS -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+  <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet"/>
+  <link href="bower_components/bootstrap-select/bootstrap-select.min.css" rel="stylesheet"/>
+  <link href="bower_components/footable/css/footable.core.min.css" rel="stylesheet"/>
+  <link href="assets/css/rdvmedecins.css" rel="stylesheet"/>
+</head>
+<body ng-controller="rdvMedecinsCtrl">
+<div class="container">
+  <h1>Rdvmedecins - v1</h1>
+
+  <!-- le message d'attente -->
+  <waiting model="waiting"></waiting>
+
+  <!-- la liste d'erreurs -->
+  <errors model="errors"></errors>
+
+  <!-- le bouton -->
+  <div class="alert alert-warning">
+    <button class="btn btn-primary" ng-click="getClients()">{{clients.title|translate}}</button>
+  </div>
+
+  <!-- la liste des clients -->
+  <list2 model="clients" ng-if="clients.show"></list2>
+</div>
+<!-- Bootstrap core JavaScript ================================================== -->
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap-select/bootstrap-select.min.js"></script>
+<script src="bower_components/footable/dist/footable.min.js" type="text/javascript"></script>
+<!-- angular js -->
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-translate/angular-translate.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-base64/angular-base64.min.js"></script>
+<script type="text/javascript" src="rdvmedecins-12.js"></script>
+<!-- directives -->
+<script type="text/javascript" src="list2.js"></script>
+<script type="text/javascript" src="errors.js"></script>
+<script type="text/javascript" src="waiting.js"></script>
+</body>
+</html>

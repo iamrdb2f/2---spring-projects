@@ -1,0 +1,15 @@
+{
+  "name": "rdvmedecins-angular",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "~1.2.18",
+    "angular-base64": "~2.0.2",
+    "angular-route": "~1.2.18",
+    "angular-translate": "~2.2.0",
+    "bootstrap": "~3.1.1",
+    "footable": "~2.0.1",
+    "angular-ui-bootstrap-bower": "~0.11.0",
+    "bootstrap-select": "~1.5.2",
+    "angular-i18n": "~1.2.18"
+  }
+}

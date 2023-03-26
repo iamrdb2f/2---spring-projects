@@ -1,0 +1,13 @@
+<!-- une liste de clients ou de médecins -->
+<div class="alert alert-info" ng-show="model.show">
+  <div class="row">
+    <div class="col-md-4">
+      <h2 translate="{{model.title}}"></h2>
+      <select data-style="btn-primary" id="{{model.id}}" ng-if="model.data">
+        <option ng-repeat="element in model.data" value="{{element.id}}">
+          {{element.titre}} {{element.prenom}} {{element.nom}}
+        </option>
+      </select>
+    </div>
+  </div>
+</div>
